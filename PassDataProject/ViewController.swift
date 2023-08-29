@@ -8,7 +8,16 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+protocol PassDataDelegate {
+    
+    func receivetext(text: String)
+    
+}
+
+class ViewController: UIViewController, PassDataDelegate {
+   
+   
+    
 
     let topView = {
         let view = UIView()
@@ -24,7 +33,7 @@ class ViewController: UIViewController {
         return view
     }()
     
-    let dataRecieveTextField = {
+    let dataRecieveLabel = {
         
         let view = UILabel()
         view.backgroundColor = .black
@@ -47,7 +56,7 @@ class ViewController: UIViewController {
         
         view.addSubview(topView)
         view.addSubview(thumbnailImageView)
-        view.addSubview(dataRecieveTextField)
+        view.addSubview(dataRecieveLabel)
         view.addSubview(dataPassButton)
         
         mainVCSetting()
@@ -59,9 +68,20 @@ class ViewController: UIViewController {
 
     @objc func buttonClicked(){
          
-        navigationController?.pushViewController(DataViewController(), animated: true)
+        // MARK: - notification: navigationController?.pushViewController(DataViewController(), animated: true)
+
+        let vc = DelegateViewController()
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
+         
      }
      
+    
+    func receivetext(text: String) {
+        dataRecieveLabel.text = text
+    }
+    
+    
     
     // MARK: - notification
 
@@ -86,7 +106,7 @@ class ViewController: UIViewController {
         
         guard let name = notification.userInfo?["name"] as? String else {return}
             
-        dataRecieveTextField.text = name
+        dataRecieveLabel.text = name
         
     }
     
@@ -107,14 +127,14 @@ class ViewController: UIViewController {
             make.center.equalTo(topView)
         }
         
-        dataRecieveTextField.snp.makeConstraints { make in
+        dataRecieveLabel.snp.makeConstraints { make in
             make.height.equalTo(40)
             make.leading.trailing.equalToSuperview()
             make.center.equalToSuperview()
         }
         
         dataPassButton.snp.makeConstraints { make in
-            make.top.equalTo(dataRecieveTextField.snp.bottom).offset(20)
+            make.top.equalTo(dataRecieveLabel.snp.bottom).offset(20)
             make.horizontalEdges.equalToSuperview()
         }
         
@@ -122,4 +142,5 @@ class ViewController: UIViewController {
     }
    
 }
+
 

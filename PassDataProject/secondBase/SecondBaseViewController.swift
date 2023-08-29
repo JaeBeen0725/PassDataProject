@@ -25,8 +25,12 @@ class SecondBaseViewController: UIViewController {
         view.addSubview(addwordTextField)
         dataVCSetting()
         
+     
+        
     }
 
+   
+    
     
     func dataVCSetting() {
         

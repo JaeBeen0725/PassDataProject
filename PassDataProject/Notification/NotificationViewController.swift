@@ -17,8 +17,7 @@ class DataViewController: SecondBaseViewController {
         dataVCSetting()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(completionButtonClicked))
-
-
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
