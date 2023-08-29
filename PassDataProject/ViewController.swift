@@ -8,11 +8,13 @@
 import UIKit
 import SnapKit
 
+// MARK: - protocol값전달
 protocol PassDataDelegate {
     
     func receivetext(text: String)
     
 }
+
 
 class ViewController: UIViewController, PassDataDelegate {
    
@@ -58,7 +60,6 @@ class ViewController: UIViewController, PassDataDelegate {
         view.addSubview(thumbnailImageView)
         view.addSubview(dataRecieveLabel)
         view.addSubview(dataPassButton)
-        
         mainVCSetting()
         
         
@@ -70,10 +71,21 @@ class ViewController: UIViewController, PassDataDelegate {
          
         // MARK: - notification: navigationController?.pushViewController(DataViewController(), animated: true)
 
-        let vc = DelegateViewController()
-        vc.delegate = self
+        // MARK: - protocol
+                
+   //            let vc = DelegateViewController()
+//                     vc.delegate = self
+//                     navigationController?.pushViewController(vc, animated: true)
+                      
+        let vc = ClosureViewController()
+        vc.closureDataPass = { text in
+            
+            self.dataRecieveLabel.text = text
+            
+        }
         navigationController?.pushViewController(vc, animated: true)
-         
+        
+        
      }
      
     
@@ -93,6 +105,8 @@ class ViewController: UIViewController, PassDataDelegate {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        
+        
         
     }
     
