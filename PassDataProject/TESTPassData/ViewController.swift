@@ -62,14 +62,15 @@ class ViewController: UIViewController, PassDataDelegate {
         view.addSubview(dataPassButton)
         mainVCSetting()
         
-        
+        APIService.shard.callRequest()
+  
         dataPassButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
        
     }
 
     @objc func buttonClicked(){
          
-        // MARK: - notification: navigationController?.pushViewController(DataViewController(), animated: true)
+         //navigationController?.pushViewController(DataViewController(), animated: true)
 
         // MARK: - protocol
                 
@@ -79,7 +80,6 @@ class ViewController: UIViewController, PassDataDelegate {
                       
         let vc = ClosureViewController()
         vc.closureDataPass = { text in
-            
             self.dataRecieveLabel.text = text
             
         }
@@ -112,17 +112,17 @@ class ViewController: UIViewController, PassDataDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("=====옵저버======", #function)
-        NotificationCenter.default.addObserver(self, selector: #selector(addwordNotificationOberver), name: Notification.Name("Notification"), object: nil)
+       // print("=====옵저버======", #function)
+//        NotificationCenter.default.addObserver(self, selector: #selector(addwordNotificationOberver), name: Notification.Name("Notification"), object: nil)
     }
     
-    @objc func addwordNotificationOberver(notification: NSNotification) {
-        
-        guard let name = notification.userInfo?["name"] as? String else {return}
-            
-        dataRecieveLabel.text = name
-        
-    }
+//    @objc func addwordNotificationOberver(notification: NSNotification) {
+//
+//        guard let name = notification.userInfo?["name"] as? String else {return}
+//
+//        dataRecieveLabel.text = name
+//
+//    }
     
     
   

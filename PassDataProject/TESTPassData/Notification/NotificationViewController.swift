@@ -16,23 +16,24 @@ class DataViewController: SecondBaseViewController {
         view.addSubview(addwordTextField)
         dataVCSetting()
         
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료", style: .plain, target: self, action: #selector(completionButtonClicked))
         
     }
+    
+    @objc func completionButtonClicked() {
+//        print("==========포스트=====", #function)
+//        NotificationCenter.default.post(name: Notification.Name("Notification"), object: nil, userInfo: ["name": addwordTextField.text!])
+        navigationController?.popViewController(animated: false)
+        
+    }
+    
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
     }
-    
-    
-    @objc func completionButtonClicked() {
-        print("==========포스트=====", #function)
-        NotificationCenter.default.post(name: Notification.Name("Notification"), object: nil, userInfo: ["name": addwordTextField.text!])
-        navigationController?.popViewController(animated: false)
-        
-    }
-    
     
   
     

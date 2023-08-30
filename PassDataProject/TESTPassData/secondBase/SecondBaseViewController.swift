@@ -25,12 +25,13 @@ class SecondBaseViewController: UIViewController {
         view.addSubview(addwordTextField)
         dataVCSetting()
         
-     
+        addwordTextField.becomeFirstResponder()
+        addwordTextField.delegate = self
         
     }
 
-   
     
+   
     
     func dataVCSetting() {
         
@@ -39,9 +40,17 @@ class SecondBaseViewController: UIViewController {
             make.height.equalTo(40)
             make.center.equalToSuperview()
         }
-        
     }
     
     
+    
+    
+}
+
+extension SecondBaseViewController: UITextFieldDelegate{
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        addwordTextField.resignFirstResponder()
+    }
     
 }

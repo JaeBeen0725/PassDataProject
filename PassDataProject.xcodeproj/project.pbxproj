@@ -18,6 +18,12 @@
 		6E19F43A2A9E07ED0011458E /* DelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F4392A9E07ED0011458E /* DelegateViewController.swift */; };
 		6E19F43D2A9E08360011458E /* SecondBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F43C2A9E08360011458E /* SecondBaseViewController.swift */; };
 		6E19F43F2A9E40190011458E /* ClosureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F43E2A9E40190011458E /* ClosureViewController.swift */; };
+		6E19F4482A9EFDBD0011458E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F4472A9EFDBD0011458E /* APIService.swift */; };
+		6E19F44A2A9F00C60011458E /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F4492A9F00C60011458E /* URLSessionViewController.swift */; };
+		6E19F44E2A9F4C120011458E /* MainProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F44D2A9F4C120011458E /* MainProfileSettingViewController.swift */; };
+		6E19F4502A9F594B0011458E /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F44F2A9F594B0011458E /* MainTableViewCell.swift */; };
+		6E19F4532A9F65CA0011458E /* DetailSettingBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F4522A9F65CA0011458E /* DetailSettingBase.swift */; };
+		6E19F4562A9F6C440011458E /* ChangeNameNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E19F4552A9F6C440011458E /* ChangeNameNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		6E19F4392A9E07ED0011458E /* DelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateViewController.swift; sourceTree = "<group>"; };
 		6E19F43C2A9E08360011458E /* SecondBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondBaseViewController.swift; sourceTree = "<group>"; };
 		6E19F43E2A9E40190011458E /* ClosureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureViewController.swift; sourceTree = "<group>"; };
+		6E19F4472A9EFDBD0011458E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		6E19F4492A9F00C60011458E /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
+		6E19F44D2A9F4C120011458E /* MainProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileSettingViewController.swift; sourceTree = "<group>"; };
+		6E19F44F2A9F594B0011458E /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		6E19F4522A9F65CA0011458E /* DetailSettingBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSettingBase.swift; sourceTree = "<group>"; };
+		6E19F4552A9F6C440011458E /* ChangeNameNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +78,10 @@
 		6E19F41A2A9DD5CA0011458E /* PassDataProject */ = {
 			isa = PBXGroup;
 			children = (
-				6E19F4402A9E40940011458E /* Closure */,
-				6E19F43B2A9E08070011458E /* secondBase */,
-				6E19F4382A9E07C50011458E /* Delegate */,
-				6E19F4372A9E077F0011458E /* Notification */,
+				6E19F44B2A9F4AB30011458E /* TESTPassData */,
+				6E19F44C2A9F4ADD0011458E /* instargram */,
 				6E19F41B2A9DD5CA0011458E /* AppDelegate.swift */,
 				6E19F41D2A9DD5CA0011458E /* SceneDelegate.swift */,
-				6E19F41F2A9DD5CA0011458E /* ViewController.swift */,
 				6E19F4242A9DD5CC0011458E /* Assets.xcassets */,
 				6E19F4262A9DD5CC0011458E /* LaunchScreen.storyboard */,
 				6E19F4292A9DD5CC0011458E /* Info.plist */,
@@ -110,6 +119,55 @@
 				6E19F43E2A9E40190011458E /* ClosureViewController.swift */,
 			);
 			path = Closure;
+			sourceTree = "<group>";
+		};
+		6E19F4462A9EFD990011458E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6E19F4472A9EFDBD0011458E /* APIService.swift */,
+				6E19F4492A9F00C60011458E /* URLSessionViewController.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6E19F44B2A9F4AB30011458E /* TESTPassData */ = {
+			isa = PBXGroup;
+			children = (
+				6E19F41F2A9DD5CA0011458E /* ViewController.swift */,
+				6E19F4372A9E077F0011458E /* Notification */,
+				6E19F4382A9E07C50011458E /* Delegate */,
+				6E19F43B2A9E08070011458E /* secondBase */,
+				6E19F4402A9E40940011458E /* Closure */,
+				6E19F4462A9EFD990011458E /* Network */,
+			);
+			path = TESTPassData;
+			sourceTree = "<group>";
+		};
+		6E19F44C2A9F4ADD0011458E /* instargram */ = {
+			isa = PBXGroup;
+			children = (
+				6E19F4542A9F6B4B0011458E /* NameNotificaitonDataPass */,
+				6E19F4512A9F65990011458E /* DetailSettingBase */,
+				6E19F44D2A9F4C120011458E /* MainProfileSettingViewController.swift */,
+				6E19F44F2A9F594B0011458E /* MainTableViewCell.swift */,
+			);
+			path = instargram;
+			sourceTree = "<group>";
+		};
+		6E19F4512A9F65990011458E /* DetailSettingBase */ = {
+			isa = PBXGroup;
+			children = (
+				6E19F4522A9F65CA0011458E /* DetailSettingBase.swift */,
+			);
+			path = DetailSettingBase;
+			sourceTree = "<group>";
+		};
+		6E19F4542A9F6B4B0011458E /* NameNotificaitonDataPass */ = {
+			isa = PBXGroup;
+			children = (
+				6E19F4552A9F6C440011458E /* ChangeNameNotification.swift */,
+			);
+			path = NameNotificaitonDataPass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,12 +248,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E19F4502A9F594B0011458E /* MainTableViewCell.swift in Sources */,
+				6E19F4532A9F65CA0011458E /* DetailSettingBase.swift in Sources */,
 				6E19F43F2A9E40190011458E /* ClosureViewController.swift in Sources */,
 				6E19F43A2A9E07ED0011458E /* DelegateViewController.swift in Sources */,
 				6E19F4362A9DEA5A0011458E /* NotificationViewController.swift in Sources */,
+				6E19F44A2A9F00C60011458E /* URLSessionViewController.swift in Sources */,
 				6E19F4202A9DD5CA0011458E /* ViewController.swift in Sources */,
 				6E19F43D2A9E08360011458E /* SecondBaseViewController.swift in Sources */,
 				6E19F41C2A9DD5CA0011458E /* AppDelegate.swift in Sources */,
+				6E19F4482A9EFDBD0011458E /* APIService.swift in Sources */,
+				6E19F44E2A9F4C120011458E /* MainProfileSettingViewController.swift in Sources */,
+				6E19F4562A9F6C440011458E /* ChangeNameNotification.swift in Sources */,
 				6E19F41E2A9DD5CA0011458E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
