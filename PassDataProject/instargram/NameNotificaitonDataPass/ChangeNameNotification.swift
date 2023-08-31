@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChangeNameNotification: DetailSettingBase {
+class ChangeNameNotification: DetailSettingBaseViewController {
     
   
     
@@ -29,7 +29,6 @@ class ChangeNameNotification: DetailSettingBase {
         navigationController?.popViewController(animated: true)
         
     }
-    
     
     
   

@@ -114,22 +114,38 @@ extension MainProfileSettingViewController: UITableViewDataSource, UITableViewDe
         
         if indexPath.item == 0 {
             
-            
+  
             navigationController?.pushViewController(ChangeNameNotification(), animated: true)
-            
-           
-            
+      
         } else if indexPath.item == 1 {
+            let vc = DelegateDataPassViewController()
+            vc.delegate = self
             
+            navigationController?.pushViewController(vc, animated: true)
             
         } else {
+            let vc = ClosureDataPassViewControll()
             
+            vc.completionHandler = { gender in
+                self.tableViewCellList[2] = gender
+                
+                self.settingTableView.reloadData()
+            }
+            
+            navigationController?.pushViewController(vc, animated: true)
         }
         
 
-        
-        
     }
-    
+
+}
+
+
+extension MainProfileSettingViewController: UserNamePassDataDelegate {
+    func receiveData(data: String) {
+        tableViewCellList[1] = data
+        settingTableView.reloadData()
+    }
+  
     
 }

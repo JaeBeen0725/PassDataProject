@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailSettingBase: UIViewController {
+class DetailSettingBaseViewController: UIViewController {
     
     let detailSettingTextField = {
         
@@ -18,9 +18,6 @@ class DetailSettingBase: UIViewController {
         return view
     }()
     
-  
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
@@ -28,35 +25,23 @@ class DetailSettingBase: UIViewController {
         configureView()
         setConstraints()
         
-       
     }
     
     func configureView() {
-        
         view.addSubview(detailSettingTextField)
-     
     }
     
     
     func setConstraints() {
         
         detailSettingTextField.snp.makeConstraints { make in
-            //make.top.leadingMargin.trailingMargin.equalToSuperview()
-            
-           
-            make.top.horizontalEdges.equalToSuperview()
+            make.leadingMargin.trailingMargin.equalToSuperview()
+            make.top.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(40)
          
-            make.height.equalTo(200)
-          //  make.center.equalToSuperview()
         }
         
-     
     }
-    
-    
-  
-  
-    
     
     
 }
