@@ -13,12 +13,12 @@ class ChangeNameNotification: DetailSettingBase {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        view.addSubview(detailSettingTextField)
+       
+      
         detailSettingTextField.placeholder = "이름을 입력하세요"
         
            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "설정", style: .plain, target: self, action: #selector(completeButtonClicked))
-        setConstraints()
+       
     }
     
     

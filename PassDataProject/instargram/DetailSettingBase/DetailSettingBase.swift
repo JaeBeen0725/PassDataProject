@@ -44,10 +44,10 @@ class DetailSettingBase: UIViewController {
             //make.top.leadingMargin.trailingMargin.equalToSuperview()
             
            
-            make.topMargin.leadingMargin.trailingMargin.equalToSuperview()
+            make.top.horizontalEdges.equalToSuperview()
          
-            make.height.equalTo(40)
-            make.center.equalToSuperview()
+            make.height.equalTo(200)
+          //  make.center.equalToSuperview()
         }
         
      

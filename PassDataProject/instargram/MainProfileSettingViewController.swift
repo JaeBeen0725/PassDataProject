@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class MainProfileSettingViewController: UIViewController {
-let tableViewCellList = ["이름", "사용자 이름", "성별 대명사"]
+    var tableViewCellList = ["이름", "사용자 이름", "성별 대명사"]
    
     
     let topView = {
@@ -58,11 +58,12 @@ let tableViewCellList = ["이름", "사용자 이름", "성별 대명사"]
     @objc func nameNotification(notification: NSNotification) {
         
         guard let data = notification.userInfo?["name"] as? String else {return}
-        
-        let cell = MainTableViewCell()
-        cell.settingTableViewLable.text = data
-       
-        print(tableViewCellList)
+        print("DATA", data)
+      
+  
+        tableViewCellList[0] = data
+   
+        settingTableView.reloadData()
       
     }
     
@@ -124,6 +125,9 @@ extension MainProfileSettingViewController: UITableViewDataSource, UITableViewDe
         } else {
             
         }
+        
+
+        
         
     }
     
